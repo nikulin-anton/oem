@@ -12,7 +12,7 @@ const { messages, user } = defineProps<Props>();
   <div class="messages">
     <template v-for="message in messages" :key="messages.id">
       <MessageSender v-if="message.sender.id === user.id" :message="message" />
-      <MessageRecipient v-else />
+      <MessageRecipient v-else :message="message" />
     </template>
   </div>
 </template>

@@ -16,6 +16,8 @@
   --text-white: #fff;
   --bg-block-primary: #fff;
   --bg-block-3: #8fa0af;
+  --bg-block-tertiary: #4a545c;
+  --system-success: #157b2f;
   --system-info: #0086ea;
   --system-info-light: rgba(0, 133, 234, 0.16);
   --border-primary: #cdd5de;
