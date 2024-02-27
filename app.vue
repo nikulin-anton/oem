@@ -17,6 +17,7 @@
   --bg-block-primary: #fff;
   --bg-block-3: #8fa0af;
   --system-info: #0086ea;
+  --system-info-light: rgba(0, 133, 234, 0.16);
   --border-primary: #cdd5de;
   --interactive-gray-hover: #f8f9fa;
 

@@ -2,7 +2,7 @@
 import { useRoute } from "vue-router";
 
 const { params } = useRoute();
-const { data: user } = await useFetch<User>("/api/user");
+const { data: user } = await useFetch<User>("/api/user"); // Use store instead
 const { data: messages } = await useFetch<Message[]>(
   `/api/chat/${params.chatId}/messages`
 );
