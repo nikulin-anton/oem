@@ -7,5 +7,15 @@ const { data: chats } = await useFetch<Chat[]>("/api/chat");
   <AppHeader v-if="user" :user="user" />
   <div v-if="chats" class="messanger-container">
     <ChatList :chats="chats" />
+    <div class="chat-room"><NuxtPage /></div>
   </div>
 </template>
+
+<style scoped>
+.messanger-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;
+  overflow: hidden;
+}
+</style>
