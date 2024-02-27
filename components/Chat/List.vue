@@ -6,5 +6,15 @@ const { chats } = defineProps<Props>();
 </script>
 
 <template>
-  <ChatItem v-for="chat in chats" :chat="chat" :key="chat.id" />
+  <section class="list">
+    <ChatItem v-for="chat in chats" :chat="chat" :key="chat.id" />
+  </section>
 </template>
+
+<style scoped>
+.list {
+  border-right: 1px solid var(--border-primary);
+  overflow: scroll;
+  max-height: 100%;
+}
+</style>
