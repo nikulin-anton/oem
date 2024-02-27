@@ -10,7 +10,7 @@ const { src, alt, width = 24, height = 24 } = defineProps<Props>();
 </script>
 
 <template>
-  <img class="avatar" :src="src" :alt="alt" :width="width" :height="height"
+  <img class="avatar" :src="src" :alt="alt" :width="width" :height="height" />
 </template>
 
 <style scoped>
