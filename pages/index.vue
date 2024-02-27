@@ -18,4 +18,11 @@ const { data: chats } = await useFetch<Chat[]>("/api/chat");
   height: 100%;
   overflow: hidden;
 }
+
+.chat-room {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
 </style>

@@ -19,6 +19,9 @@ const { messages, user } = defineProps<Props>();
 
 <style scoped>
 .messages {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
   padding: 0 24px;
 }
 </style>
