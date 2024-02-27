@@ -1,6 +1,7 @@
 <script setup lang="ts">
+const { data } = await useFetch("/api/user");
 </script>
 
 <template>
-  Some content
+  <AppHeader v-if="data" :user="data" />
 </template>
