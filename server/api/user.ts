@@ -1,5 +1,3 @@
-import { getUserMock } from "~/utils/mocks/user.mock";
+import { userMock } from "../db/user";
 
-export default defineEventHandler((event) => {
-  return getUserMock();
-});
+export default defineEventHandler(() => userMock);

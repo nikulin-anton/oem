@@ -2,8 +2,14 @@
 import { useRoute } from "vue-router";
 
 const { params } = useRoute();
+const { data: user } = await useFetch<User>("/api/user");
+const { data: messages } = await useFetch<Message[]>(
+  `/api/chat/${params.chatId}/messages`
+);
 </script>
 
 <template>
-  <div>{{ params.chatId }}</div>
+  <div v-if="messages && user" class="messenger">
+    <MessageContainer :messages="messages" :user="user" />
+  </div>
 </template>
