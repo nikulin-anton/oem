@@ -20,7 +20,6 @@ const { message } = defineProps<Props>();
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 24px 0;
 }
 
 .content {

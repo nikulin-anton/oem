@@ -48,6 +48,10 @@ const unreaded = chat.unreadedIncomingMessages;
   max-height: 100%;
 }
 
+.router-link-active {
+  background-color: var(--interactive-gray-hover);
+}
+
 .middle-block {
   display: flex;
   flex-direction: column;

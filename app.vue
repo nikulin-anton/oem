@@ -16,7 +16,7 @@
   --text-white: #fff;
   --bg-block-primary: #fff;
   --bg-block-3: #8fa0af;
-  --bg-block-tertiary: #4a545c;
+  --bg-block-tertiary: #eef1f4;
   --system-success: #157b2f;
   --system-info: #0086ea;
   --system-info-light: rgba(0, 133, 234, 0.16);
@@ -25,6 +25,7 @@
 
   --max-width: 1100px;
   --font-family: Quicksand, sans-serif;
+  --margin: 24px;
 
   --foreground: var(--text-primary);
   --background: var(--bg-block-primary);
@@ -39,6 +40,7 @@
     --system-info: #0d6cbd;
     --border-primary: #4a545c;
     --interactive-gray-hover: #353c43;
+    --bg-block-tertiary: #4a545c;
   }
 }
 

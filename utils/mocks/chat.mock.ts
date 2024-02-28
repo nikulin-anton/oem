@@ -10,7 +10,7 @@ export function getChatMock(chat: Partial<Chat> = {}): Chat {
       value: faker.lorem.sentences(),
       dateTime: faker.date.recent(),
     },
-    isPinned: faker.datatype.boolean(),
+    isPinned: Math.random() > 0.9,
     sentMessageRead: faker.datatype.boolean(),
     unreadedIncomingMessages: faker.datatype.boolean()
       ? faker.number.int({ min: 1, max: 99 })

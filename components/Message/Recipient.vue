@@ -32,14 +32,13 @@ const { message } = defineProps<Props>();
 .message {
   display: flex;
   align-items: flex-end;
-  margin: 24px 0;
 }
 
 .message-content {
   flex-direction: column;
   align-items: flex-start;
   max-width: 60%;
-  margin-left: 24px;
+  margin-left: var(--margin);
 }
 
 .name {
