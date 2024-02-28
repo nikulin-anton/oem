@@ -3,15 +3,23 @@ import { useRoute } from "vue-router";
 
 const { params } = useRoute();
 const { data: user } = await useFetch<User>("/api/user"); // Use store instead
-const { data: messages } = await useFetch<Message[]>(
-  `/api/chat/${params.chatId}/messages`
-);
+const messagesUrl = `/api/chat/${params.chatId}/messages`;
+const { data: messages } = await useFetch<Message[]>(messagesUrl);
+
+const addMessage = async (message: string) => {
+  const newMessage = await $fetch<Message>(messagesUrl, {
+    method: "POST",
+    body: { message },
+  });
+
+  messages.value?.push(newMessage);
+};
 </script>
 
 <template>
   <div v-if="messages && user" class="messenger">
     <MessageContainer :messages="messages" :user="user" />
-    <MessageBox />
+    <MessageBox @submit="addMessage" />
   </div>
 </template>
 

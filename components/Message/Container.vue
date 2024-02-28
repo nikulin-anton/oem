@@ -7,8 +7,11 @@ interface Props {
 
 const { messages, user } = defineProps<Props>();
 const divRef = ref<HTMLElement | null>(null);
+const scrollToBottom = () =>
+  divRef.value?.scrollTo(0, divRef.value.scrollHeight);
 
-onMounted(() => divRef.value?.scrollTo(0, divRef.value.scrollHeight));
+onMounted(() => scrollToBottom());
+onUpdated(() => scrollToBottom());
 </script>
 
 <template>

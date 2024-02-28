@@ -1,8 +1,12 @@
 <script setup lang="ts">
+type Emits = { submit: [message: string] };
+
 const newMessage = ref<string>("");
 const isValid = computed(() => newMessage.value.length > 0);
+const emit = defineEmits<Emits>();
+
 const onSubmit = () => {
-  console.log(newMessage);
+  emit("submit", newMessage.value);
   newMessage.value = "";
 };
 </script>
