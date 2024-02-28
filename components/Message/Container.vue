@@ -10,20 +10,28 @@ const divRef = ref<HTMLElement | null>(null);
 const scrollToBottom = () =>
   divRef.value?.scrollTo(0, divRef.value.scrollHeight);
 
+watch(messages, () => setTimeout(() => scrollToBottom()));
 onMounted(() => scrollToBottom());
-onUpdated(() => scrollToBottom());
 </script>
 
 <template>
   <div class="messages" ref="divRef">
-    <template v-for="message in messages" :key="messages.id">
-      <MessageSender
-        class="message"
-        v-if="message.sender.id === user.id"
-        :message="message"
-      />
-      <MessageRecipient class="message" v-else :message="message" />
-    </template>
+    <TransitionGroup name="list">
+      <template v-for="message in messages" :key="message.id">
+        <MessageSender
+          class="message"
+          v-if="message.sender.id === user.id"
+          :message="message"
+          :key="message.id"
+        />
+        <MessageRecipient
+          class="message"
+          v-else
+          :message="message"
+          :key="message.id + '1'"
+        />
+      </template>
+    </TransitionGroup>
   </div>
 </template>
 
@@ -38,5 +46,16 @@ onUpdated(() => scrollToBottom());
 
 .message + .message {
   margin-top: var(--margin);
+}
+
+.list-enter-active,
+.list-leave-active {
+  position: relative;
+  transition: all 0.2s ease-out;
+}
+.list-enter-from,
+.list-leave-to {
+  transform: translateX(30%);
+  opacity: 0;
 }
 </style>

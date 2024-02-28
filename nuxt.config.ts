@@ -3,5 +3,5 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: { typeCheck: true, strict: true },
   modules: ["nuxt-time"],
-  app: { rootId: "app" },
+  app: { rootId: "app", pageTransition: { name: "page", mode: "out-in" } },
 });
