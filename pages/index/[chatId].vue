@@ -11,7 +11,7 @@ const { data: messages } = await useFetch<Message[]>(
 <template>
   <div v-if="messages && user" class="messenger">
     <MessageContainer :messages="messages" :user="user" />
-    <textarea>Some value</textarea>
+    <MessageBox />
   </div>
 </template>
 
