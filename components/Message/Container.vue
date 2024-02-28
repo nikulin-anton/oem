@@ -6,10 +6,13 @@ interface Props {
 }
 
 const { messages, user } = defineProps<Props>();
+const divRef = ref<HTMLElement | null>(null);
+
+onMounted(() => divRef.value?.scrollTo(0, divRef.value.scrollHeight));
 </script>
 
 <template>
-  <div class="messages">
+  <div class="messages" ref="divRef">
     <template v-for="message in messages" :key="messages.id">
       <MessageSender
         class="message"
