@@ -20,5 +20,6 @@ const { user } = defineProps<Params>();
   justify-content: space-between;
   padding: 14px 24px;
   box-shadow: 0 1px 2px rgba(2, 17, 37, 0.12);
+  background-color: var(--bg-block-primary);
 }
 </style>

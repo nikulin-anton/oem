@@ -32,6 +32,7 @@ onUpdated(() => scrollToBottom());
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  height: 100%;
   padding: var(--margin);
 }
 

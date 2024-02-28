@@ -14,6 +14,7 @@
   --text-primary: #000;
   --text-secondary: #616c76;
   --text-white: #fff;
+  --bg-page-primary: #ffffff;
   --bg-block-primary: #fff;
   --bg-block-secondary: #f8f9fa;
   --bg-block-3: #8fa0af;
@@ -31,7 +32,7 @@
   --margin: 24px;
 
   --foreground: var(--text-primary);
-  --background: var(--bg-block-primary);
+  --background: var(--bg-page-primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +40,7 @@
     --text-primary: #eef1f4;
     --text-secondary: #abbbc9;
     --text-white: #0e1114;
+    --bg-page-primary: #181c20;
     --bg-block-primary: #21262b;
     --bg-block-secondary: #353c43;
     --system-info: #0d6cbd;

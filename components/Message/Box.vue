@@ -47,8 +47,10 @@ const onSubmit = () => {
 }
 
 .textarea {
+  display: block;
   padding: 8px 12px;
   font-family: var(--font-family);
+  background-color: var(--bg-block-primary);
   font-size: 14px;
   border: none;
   width: 100%;

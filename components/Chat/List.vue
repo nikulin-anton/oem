@@ -17,5 +17,6 @@ const { chats } = defineProps<Props>();
   overflow: scroll;
   max-height: 100%;
   box-shadow: 1px 0 8px 0px #00000023;
+  background-color: var(--bg-block-primary);
 }
 </style>
