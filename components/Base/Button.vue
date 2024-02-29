@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { ButtonHTMLAttributes } from "vue";
+import type { ButtonHTMLAttributes } from 'vue';
 
 interface Props {
-  size?: "small" | "medium" | "large";
-  status?: "primary" | "secondary" | "tertiary" | "ghost";
+  size?: 'small' | 'medium' | 'large';
+  status?: 'primary' | 'secondary' | 'tertiary' | 'ghost';
 }
 
-const { size = "medium", status = "primary" } = defineProps<Props>();
+const { size = 'medium', status = 'primary' } = defineProps<Props>();
 </script>
 
 <template>

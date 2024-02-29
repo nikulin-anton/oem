@@ -22,14 +22,12 @@ onMounted(() => scrollToBottom());
           class="message"
           v-if="message.sender.id === user.id"
           :message="message"
-          :key="message.id"
-        />
+          :key="message.id" />
         <MessageRecipient
           class="message"
           v-else
           :message="message"
-          :key="message.id + '1'"
-        />
+          :key="message.id + '1'" />
       </template>
     </TransitionGroup>
   </div>

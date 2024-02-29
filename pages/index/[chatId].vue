@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
+import { useRoute } from 'vue-router';
 
 const { params } = useRoute();
-const { data: user } = await useFetch<User>("/api/user"); // Use store instead
+const { data: user } = await useFetch<User>('/api/user'); // Use store instead
 const messagesUrl = `/api/chat/${params.chatId}/messages`;
 const { data: messages } = await useFetch<Message[]>(messagesUrl);
 
 const addMessage = async (message: string) => {
   const newMessage = await $fetch<Message>(messagesUrl, {
-    method: "POST",
+    method: 'POST',
     body: { message },
   });
 

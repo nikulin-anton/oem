@@ -12,8 +12,7 @@ const { message } = defineProps<Props>();
       alt="Sender"
       :src="message.sender.avatar"
       :width="40"
-      :height="40"
-    />
+      :height="40" />
     <div class="message-content">
       <p class="name">{{ message.sender.firstName }}</p>
       <p class="content">{{ message.message }}</p>
@@ -21,8 +20,7 @@ const { message } = defineProps<Props>();
         <NuxtTime
           :datetime="message.datetime"
           hour="2-digit"
-          minute="2-digit"
-        />
+          minute="2-digit" />
       </p>
     </div>
   </div>

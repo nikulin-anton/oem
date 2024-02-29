@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getIconByName } from "~/utils/helpers/getIconByName";
+import { getIconByName } from '~/utils/helpers/getIconByName';
 interface Props {
   icon: string;
 }

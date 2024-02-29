@@ -1,9 +1,9 @@
 <script setup lang="ts">
 interface Props {
-  status: "primary" | "secondary";
+  status: 'primary' | 'secondary';
 }
 
-const { status } = withDefaults(defineProps<Props>(), { status: "primary" });
+const { status } = withDefaults(defineProps<Props>(), { status: 'primary' });
 </script>
 
 <template>

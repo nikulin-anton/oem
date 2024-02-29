@@ -1,13 +1,13 @@
 <script setup lang="ts">
 type Emits = { submit: [message: string] };
 
-const newMessage = ref<string>("");
+const newMessage = ref<string>('');
 const isValid = computed(() => newMessage.value.length > 0);
 const emit = defineEmits<Emits>();
 
 const onSubmit = () => {
-  emit("submit", newMessage.value);
-  newMessage.value = "";
+  emit('submit', newMessage.value);
+  newMessage.value = '';
 };
 </script>
 
@@ -15,21 +15,18 @@ const onSubmit = () => {
   <form
     class="box"
     @submit.prevent="onSubmit()"
-    @keypress.enter.prevent="onSubmit()"
-  >
+    @keypress.enter.prevent="onSubmit()">
     <textarea
       class="textarea"
       placeholder="Write a message..."
       v-model.trim="newMessage"
-      rows="2"
-    ></textarea>
+      rows="2"></textarea>
     <section class="actions">
       <BaseButton
         type="submit"
         status="secondary"
         size="small"
-        :disabled="!isValid"
-      >
+        :disabled="!isValid">
         Send
       </BaseButton>
     </section>
